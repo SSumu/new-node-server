@@ -52,14 +52,15 @@ const server = createServer(
       // log("/about");
       // res.writeHead(200, { "Content-Type": "text/html" });
       // read file and send it
-      fileReadPool
-        .exec("html", ["about.html"])
-        .then((result) => res.end(result))
-        .catch((err) => {
-          error(err);
-          res.end();
-        })
-        .then(() => fileReadPool.terminate());
+      res.end("<h1>Sadeepal</h1>");
+      // fileReadPool
+      //   .exec("html", ["about.html"])
+      //   .then((result) => res.end(result))
+      //   .catch((err) => {
+      //     error(err);
+      //     res.end();
+      //   })
+      //   .then(() => fileReadPool.terminate());
 
       /*try {
       const result = await fileReadPool.exec("html", ["about.html"]);
